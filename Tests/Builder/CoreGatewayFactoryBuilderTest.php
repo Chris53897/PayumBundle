@@ -1,13 +1,13 @@
 <?php
 
-namespace Payum\Core\Tests\Bridge\Symfony\Builder;
+namespace Payum\Bundle\PayumBundle\Tests\Builder;
 
 use Payum\Bundle\PayumBundle\Builder\CoreGatewayFactoryBuilder;
 use Payum\Bundle\PayumBundle\ContainerAwareCoreGatewayFactory;
+use Payum\Bundle\PayumBundle\DependencyInjection\ContainerAwareInterface;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 use Symfony\Component\DependencyInjection\Container;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
 class CoreGatewayFactoryBuilderTest extends TestCase
 {
