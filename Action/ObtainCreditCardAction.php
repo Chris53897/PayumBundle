@@ -33,7 +33,7 @@ class ObtainCreditCardAction implements ActionInterface, GatewayAwareInterface
     protected $httpRequest;
 
     /**
-     * @var RequestStack
+     * @var ?RequestStack
      */
     protected $httpRequestStack;
 
@@ -54,12 +54,12 @@ class ObtainCreditCardAction implements ActionInterface, GatewayAwareInterface
     /**
      * @deprecated
      */
-    public function setRequest(Request $request = null): void
+    public function setRequest(?Request $request = null): void
     {
         $this->httpRequest = $request;
     }
 
-    public function setRequestStack(RequestStack $requestStack = null): void
+    public function setRequestStack(?RequestStack $requestStack = null): void
     {
         $this->httpRequestStack = $requestStack;
     }

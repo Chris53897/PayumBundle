@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 class GetHttpRequestAction implements ActionInterface
 {
     /**
-     * @var Request
+     * @var ?Request
      */
     protected $httpRequest;
 
@@ -23,7 +23,7 @@ class GetHttpRequestAction implements ActionInterface
     /**
      * @deprecated
      */
-    public function setHttpRequest(Request $httpRequest = null): void
+    public function setHttpRequest(?Request $httpRequest = null): void
     {
         $this->httpRequest = $httpRequest;
     }
