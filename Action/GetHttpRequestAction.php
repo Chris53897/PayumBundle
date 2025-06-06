@@ -16,7 +16,7 @@ class GetHttpRequestAction implements ActionInterface
     protected $httpRequest;
 
     /**
-     * @var RequestStack
+     * @var ?RequestStack
      */
     protected $httpRequestStack;
 
@@ -28,7 +28,7 @@ class GetHttpRequestAction implements ActionInterface
         $this->httpRequest = $httpRequest;
     }
 
-    public function setHttpRequestStack(RequestStack $httpRequestStack = null): void
+    public function setHttpRequestStack(?RequestStack $httpRequestStack = null): void
     {
         $this->httpRequestStack = $httpRequestStack;
     }
