@@ -6,6 +6,7 @@
 namespace Payum\Bundle\PayumBundle\Validator\Constraints;
 
 use DateTime;
+use Symfony\Component\Validator\Attribute\HasNamedArguments;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Exception\MissingOptionsException;
 
@@ -20,6 +21,7 @@ class CreditCardDate extends Constraint
 
     public $min;
 
+    ##[HasNamedArguments]
     public function __construct($options = null)
     {
         parent::__construct($options);

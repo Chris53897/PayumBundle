@@ -32,7 +32,7 @@ class CreditCardDateValidator extends ConstraintValidator
                 return;
             }
 
-            $this->context->addViolationAt('expireAt', $constraint->invalidMessage, [
+            $this->context->addViolation('expireAt', $constraint->invalidMessage, [
                 '{{ value }}' => $value,
             ]);
         }
@@ -51,7 +51,7 @@ class CreditCardDateValidator extends ConstraintValidator
                 return;
             }
 
-            $this->context->addViolationAt('expireAt', $constraint->minMessage);
+            $this->context->addViolation('expireAt', $constraint->minMessage);
         }
     }
 }
