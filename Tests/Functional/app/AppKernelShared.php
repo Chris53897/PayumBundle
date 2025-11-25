@@ -12,11 +12,11 @@ class AppKernelShared extends Kernel
 {
     public function registerBundles(): array
     {
-        $bundles = array(
+        $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Payum\Bundle\PayumBundle\PayumBundle(),
-        );
+        ];
 
         return $bundles;
     }
