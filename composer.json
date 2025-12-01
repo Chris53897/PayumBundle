@@ -39,15 +39,15 @@
     "require": {
         "php": "^8.5",
         "payum/payum": "1.7.x",
-        "symfony/framework-bundle": "^7.3 || ^8.0",
-        "symfony/form": "^7.3 || ^8.0",
-        "symfony/validator": "^7.3 || ^8.0",
-        "symfony/security-csrf": "^7.3 || ^8.0",
-        "symfony/dependency-injection": "^7.3 || ^8.0"
+        "symfony/framework-bundle": "^7.4 || ^8.0",
+        "symfony/form": "^7.4 || ^8.0",
+        "symfony/validator": "^7.4 || ^8.0",
+        "symfony/security-csrf": "^7.4 || ^8.0",
+        "symfony/dependency-injection": "^7.4 || ^8.0"
     },
     "require-dev": {
         "defuse/php-encryption": "^2.4",
-        "doctrine/orm": "^2.8 || ^3.5",
+        "doctrine/orm": "^2.20 || ^3.5",
         "omnipay/dummy": "^3@alpha",
         "omnipay/paypal": "^3@dev",
         "payum/omnipay-v3-bridge": "dev-master",
@@ -55,14 +55,14 @@
         "phpunit/phpunit": "^9.6",
         "psr/log": "^1 || ^2 || ^3",
         "stripe/stripe-php": "~7.0",
-        "symfony/browser-kit": "^7.3 || ^8.0",
-        "symfony/expression-language": "^7.3 || ^8.0",
-        "symfony/phpunit-bridge": "^7.3 || ^8.0",
+        "symfony/browser-kit": "^7.4 || ^8.0",
+        "symfony/expression-language": "^7.4 || ^8.0",
+        "symfony/phpunit-bridge": "^7.4 || ^8.0",
         "symfony/templating": "^v6.4.24 || ^7.0",
-        "symfony/twig-bundle": "^7.3 || ^8.0",
-        "symfony/web-profiler-bundle": "^7.3 || ^8.0",
+        "symfony/twig-bundle": "^7.4 || ^8.0",
+        "symfony/web-profiler-bundle": "^7.4 || ^8.0",
         "symfony/yaml": "^8.0",
-        "twig/twig": "^2.0 || ^3.0"
+        "twig/twig": "^2.0 || ^3.22"
     },
     "suggest": {
         "sonata-project/admin-bundle": "^3 If you want to configure payments in the backend."
@@ -84,6 +84,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "beta",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
