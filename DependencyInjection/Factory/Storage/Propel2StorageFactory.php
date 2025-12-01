@@ -4,7 +4,6 @@ namespace Payum\Bundle\PayumBundle\DependencyInjection\Factory\Storage;
 use Symfony\Component\DependencyInjection\ChildDefinition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
-use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\Config\FileLocator;
 
 class Propel2StorageFactory  extends AbstractStorageFactory
