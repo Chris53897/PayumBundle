@@ -58,11 +58,11 @@
         "symfony/browser-kit": "^7.4 || ^8.0",
         "symfony/expression-language": "^7.4 || ^8.0",
         "symfony/phpunit-bridge": "^7.4 || ^8.0",
-        "symfony/templating": "^v6.4.24 || ^7.0",
+        "symfony/templating": "^v6.4.24",
         "symfony/twig-bundle": "^7.4 || ^8.0",
         "symfony/web-profiler-bundle": "^7.4 || ^8.0",
         "symfony/yaml": "^8.0",
-        "twig/twig": "^2.0 || ^3.22"
+        "twig/twig": "^3.22"
     },
     "suggest": {
         "sonata-project/admin-bundle": "^3 If you want to configure payments in the backend."
