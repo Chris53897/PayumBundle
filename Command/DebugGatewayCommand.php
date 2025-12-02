@@ -67,9 +67,7 @@ class DebugGatewayCommand extends Command
             }
 
             $rp = new \ReflectionProperty($gateway, 'actions');
-            $rp->setAccessible(true);
             $actions = $rp->getValue($gateway);
-            $rp->setAccessible(false);
 
             $output->writeln("\t<info>Actions:</info>");
             foreach ($actions as $action) {
@@ -82,14 +80,10 @@ class DebugGatewayCommand extends Command
             }
 
             $rp = new \ReflectionProperty($gateway, 'extensions');
-            $rp->setAccessible(true);
             $collection = $rp->getValue($gateway);
-            $rp->setAccessible(false);
 
             $rp = new \ReflectionProperty($collection, 'extensions');
-            $rp->setAccessible(true);
             $extensions = $rp->getValue($collection);
-            $rp->setAccessible(false);
 
             $output->writeln("");
             $output->writeln("\t<info>Extensions:</info>");
@@ -98,17 +92,13 @@ class DebugGatewayCommand extends Command
 
                 if ($extension instanceof StorageExtension) {
                     $rp = new \ReflectionProperty($extension, 'storage');
-                    $rp->setAccessible(true);
                     $storage = $rp->getValue($extension);
-                    $rp->setAccessible(false);
 
                     $output->writeln(sprintf("\t\t<info>Storage</info>: %s", get_class($storage)));
 
                     if ($storage instanceof AbstractStorage) {
                         $rp = new \ReflectionProperty($storage, 'modelClass');
-                        $rp->setAccessible(true);
                         $modelClass = $rp->getValue($storage);
-                        $rp->setAccessible(false);
 
                         $output->writeln(sprintf("\t\t<info>Model</info>: %s", $modelClass));
                     }
@@ -116,9 +106,7 @@ class DebugGatewayCommand extends Command
             }
 
             $rp = new \ReflectionProperty($gateway, 'apis');
-            $rp->setAccessible(true);
             $apis = $rp->getValue($gateway);
-            $rp->setAccessible(false);
 
             $output->writeln("");
             $output->writeln("\t<info>Apis:</info>");

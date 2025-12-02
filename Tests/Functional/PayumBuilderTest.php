@@ -24,7 +24,6 @@ class PayumBuilderTest extends WebTestCase
         $builder = static::getContainer()->get('payum.builder');
 
         $reflectedConstraint = (new \ReflectionObject($builder))->getProperty('coreGatewayFactory');
-        $reflectedConstraint->setAccessible(true);
         $constraint = $reflectedConstraint->getValue($builder);
         $this->assertInstanceOf(CoreGatewayFactoryBuilder::class, $constraint);
     }
@@ -35,7 +34,6 @@ class PayumBuilderTest extends WebTestCase
         $builder = static::getContainer()->get('payum.builder');
 
         $reflectedConstraint = (new \ReflectionObject($builder))->getProperty('httpRequestVerifier');
-        $reflectedConstraint->setAccessible(true);
         $constraint = $reflectedConstraint->getValue($builder);
         $this->assertInstanceOf(HttpRequestVerifierBuilder::class, $constraint);
     }
@@ -46,7 +44,6 @@ class PayumBuilderTest extends WebTestCase
         $builder = static::getContainer()->get('payum.builder');
 
         $reflectedConstraint = (new \ReflectionObject($builder))->getProperty('tokenFactory');
-        $reflectedConstraint->setAccessible(true);
         $constraint = $reflectedConstraint->getValue($builder);
         $this->assertInstanceOf(TokenFactoryBuilder::class, $constraint);
     }
@@ -57,7 +54,6 @@ class PayumBuilderTest extends WebTestCase
         $builder = static::getContainer()->get('payum.builder');
 
         $reflectedConstraint = (new \ReflectionObject($builder))->getProperty('mainRegistry');
-        $reflectedConstraint->setAccessible(true);
         $constraint = $reflectedConstraint->getValue($builder);
         $this->assertInstanceOf(ContainerAwareRegistry::class, $constraint);
     }
@@ -68,7 +64,6 @@ class PayumBuilderTest extends WebTestCase
         $builder = static::getContainer()->get('payum.builder');
 
         $reflectedConstraint = (new \ReflectionObject($builder))->getProperty('genericTokenFactoryPaths');
-        $reflectedConstraint->setAccessible(true);
         $constraint = $reflectedConstraint->getValue($builder);
 
         $this->assertEquals('payum_capture_do', $constraint['capture']);
